@@ -1,0 +1,19 @@
+<div class="col-md-6">
+  <h2 class="text-body-emphasis">Categories</h2>
+  <p>These can be enabled by uncommenting the section in the config file. You can then link to the category and the user will see all posts on the blog with categories in the front matter.</p>
+  
+  {% for post in site.posts%}
+    {% assign categories = post.categories | join: ',' | split: ',' %}
+    <ul class="list-unstyled ps-0">
+    {% for category in categories %}
+      <li>
+        <a class="text-danger icon-link mb-1">
+          <i class="fa-solid fa-book-open-reader"></i>
+          {{ category }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endfor %}
+
+</div>

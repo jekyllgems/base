@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  
+  {% include head.html %}
+
+  <body class="d-flex flex-column h-100">
+    
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+
+      {% include header.html %}
+    
+      <main>
+        <hr class="col-12 mb-5 border border-danger">
+        
+        {{ content }}
+      
+        <hr class="col-3 col-md-5 mb-5 border border-danger">
+      
+        
+        <div class="row g-5">
+          
+          <!-- Begin Jekyllgems Themes -->
+          {% include theme-list.html %}
+          <!-- //End Jekyllgems Themes -->
+      
+          <!-- Begin Jekyllgems Blog Posts -->
+          {% include feed.html %}
+          <!-- //End Blog Posts -->
+        </div>
+      </main>
+      
+      {% include footer.html %}
+
+    <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      
+  </body>
+
+</html>

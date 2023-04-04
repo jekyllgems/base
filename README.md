@@ -1,2 +1,3 @@
 # base
-Base files to make it simple to create sites with Jekyll
+
+Base files to make it simple to create sites with Jekyll. Usually when you install a new site via the jekyll tool `jekyll new blog` it ships with minima, but not even an actual copy of minima. It is stripped down and barely works unless the user knows how to theme a jekyll site. This gem will resolve that issue for others. This isn't really a theme per se, but more just the base files you need to set up a simple Jekyll site. See it in action so you can demo it by going to https://jekyllgems.github.io/base
