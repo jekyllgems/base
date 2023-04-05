@@ -19,7 +19,7 @@
       
           <ul class="list-unstyled">
             <li>
-              <a class="text-decoration-none text-danger" href="{{ post.url }}">
+              <a class="text-decoration-none text-danger" href="{{site.url}}{{site.baseurl}}{{ post.url }}">
                 <h3 class="lh-1">{{post.title}} - <span class="fs-5">{{post.date | date: "%B %d, %Y" }}</span></h3>
                 <p class="text-secondary">By: {{ post.author }}</p>
               </a>
