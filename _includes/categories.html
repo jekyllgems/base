@@ -2,18 +2,22 @@
   <h2 class="text-body-emphasis">Categories</h2>
   <p>These can be enabled by uncommenting the section in the config file. You can then link to the category and the user will see all posts on the blog with categories in the front matter.</p>
   
-  {% for post in site.posts%}
-    {% assign categories = post.categories | join: ',' | split: ',' %}
-    <ul class="list-unstyled ps-0">
-    {% for category in categories %}
-      <li>
-        <a class="text-danger icon-link mb-1">
-          <i class="fa-solid fa-book-open-reader"></i>
-          {{ category }}
-        </a>
-      </li>
+  <ul class="list-unstyled ps-0">
+    {% assign all_categories = "" %}
+    {% for post in site.posts %}
+      {% for category in post.categories %}
+        {% if all_categories contains category %}
+          {% continue %}
+        {% endif %}
+        {% assign all_categories = all_categories | append: category | append: "," %}
+        <li>
+          <a class="text-danger icon-link mb-1">
+            <i class="fa-solid fa-book-open-reader"></i>
+            {{ category }}
+          </a>
+        </li>
+      {% endfor %}
     {% endfor %}
-    </ul>
-  {% endfor %}
+  </ul>
 
 </div>
