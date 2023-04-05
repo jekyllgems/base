@@ -5,7 +5,7 @@
     
     {% for post in site.posts %}
     <li>
-      <a class="text-danger icon-link mb-1" href="{{ post.url }}">
+      <a class="text-danger icon-link mb-1" href="{{site.url}}{{site.baseurl}}{{post.url}}">
         <i class="fa-solid fa-book-open-reader"></i>
         {{ post.title }}
       </a>
